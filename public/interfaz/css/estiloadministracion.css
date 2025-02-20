@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quatro Slab', serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding-top: 60px;
+    font-family: 'Quatro Slab', serif;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 30px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 10px; 
+    border: 2px solid silver;
+    font-size: 1.2em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.search-bar:focus {
+    border-color: #9e213f;
+    outline: none;
+}
+
+/* Estilo del botón de busqueda */
+.search-button {
+    padding: 10px 15px;
+    background-color: #691C32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #7a1831;
+}
+
+
+/* Estilo para los checkbox */
+.checkbox-group {
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 9px 0;
+    color: #691C32;
+}
+
+.checkbox-group label {
+    font-size: 18px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin: 15px;
+}
+
+/*Estilo para la barra de usuario */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #691C32;
+    padding: 1px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 15px;
+}
+
+.peticiones-list {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/*Estilo para la lista de peticiones ingresadas */
+.list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.list-group-item h5 {
+    color: #691C32;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.list-group-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+body, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remueve el margen superior del contenedor principal */
+.container {
+    margin-top: 1rem;
+}
+
+/*Estilo para los modales que muestran la información */
+.modal-content {
+    background-color: #f0f8ff; /* Color de fondo del modal */
+    border-radius: 8px;
+}
+
+.modal-header {
+    justify-content: center;
+    background-color: #691C32; /* Color de fondo del encabezado */
+    color: white;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    text-align: left;
+    padding: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+.modal-footer {
+    justify-content: center;
+}

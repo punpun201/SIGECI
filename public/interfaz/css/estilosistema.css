@@ -1,0 +1,383 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quatro Slab', serif;
+}
+
+body {
+    font-family: 'Quatro Slab', serif;
+    font-size: 25;
+    background-color: #fff;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+body::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/images.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    opacity: 0.2; 
+    z-index: -1; 
+}
+
+/*Estilo para la barra de usuario */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #691C32;
+    padding: 1px 20px;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #691C32;
+    padding: 3px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 8px; 
+}
+
+/* Diseño para la ventana emergente */
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.modal-header {
+    background-color: #691C32;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Función descartada para hacer aparecer burbujas en el fondo de forma estética */
+.bubbles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1; 
+    overflow: hidden;
+}
+
+.bubble {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #9f2240;
+    opacity: .3;
+
+    position: absolute;
+    bottom: 0;
+    left: calc(5% + 10vw * random); 
+    animation: bubble 3s linear infinite;
+}
+
+@keyframes bubble {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}/*
+
+/* Estilos para las opciones de usuario */
+.petición {
+    text-align: center; 
+    padding: 20px;
+}
+
+.petición h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.enlaces {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.enlaces a {
+    display: inline-block; 
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 25px 5px; 
+    color: #ffffff;
+    background: #691C32;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.enlaces a:hover {
+    background-color: #9d2843;
+    color: #ffffff;
+}
+
+.crear-peticion {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #691C32;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para el texto de arriba */
+.petición h1 {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    display:block;
+}
+
+.content {
+    padding: 20px;
+}
+
+.petición {
+    width: 100%;
+    max-width: 1290px;
+    margin: 15px auto;   
+} 
+
+.petición h1 {
+    font-size: 36px;
+    text-align: left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la ingresion de datos*/
+.popup {
+    background-color: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 0.3s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.popup form .inputs {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.popup form .inputs input,
+.popup form .inputs textarea,
+.popup form .inputs select {
+    width: 100%;
+    padding: 14px; 
+    margin-bottom: 20px; 
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    transition: border-color 0.3s ease;
+}
+
+
+.popup form .inputs input:focus,
+.popup form .inputs textarea:focus,
+.popup form .inputs select:focus {
+    border-color: #9e213f; 
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #691C32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px; 
+}
+
+input[type="submit"]:hover {
+    background-color: #9d2843;
+}
+
+.popup form button:hover {
+    background-color: #9e213f;
+}
+
+.p .enlaces {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px; 
+    margin-bottom: 20px; 
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    resize: vertical; 
+    min-height: 90px; 
+    max-height: 600px; 
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #9e213f; 
+    outline: none;
+}
+
+select {
+    width: 100%;
+    padding: 14px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select:focus {
+    border-color: #9d2843;
+    outline: none;
+}
+
+/* Este apartado es para darle un estilo especial al .highlight */
+
+.highlight {
+    color: #691C32;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    display: block; 
+    text-align: center;
+    margin: 0 auto; 
+    padding: 20px;
+    border: 2px solid #691C32; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    background: transparent;
+}
+
+.modal-title {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quatro Slab', serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.user {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.user h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px; 
+}
+
+.input-group, select, .btn-submit {
+    margin-bottom: 15px; 
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #9e213f; 
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; 
+}
+
+select:focus {
+    border-color: #9e213f;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #691C32;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px; 
+}
+
+.btn-submit:hover {
+    background-color: #9e213f;
+}
+
+.user p {
+    text-align: center;
+    margin-top: 20px;
+    color: #691C32;
+}
+
+a {
+    color: #691C32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

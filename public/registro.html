@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="interfaz/css/style2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Crear cuenta</title>
+</head>
+<body>
+    <div class="register">
+        <h1>Crear cuenta</h1>
+        <form id="registerForm">
+            <div class="usuario">
+                <input type="text" name="Usuario" required placeholder="Usuario">
+            </div>
+            <div class="correo">
+                <input type="email" name="Correo" required placeholder="Correo">
+            </div>
+            <div class="contrasena">
+                <input type="password" name="Contrasena" id="Contrasena" required placeholder="Contraseña">
+            </div>
+            <div class="contrasena">
+                <input type="password" name="Conficontrasena" id="Conficontrasena" required placeholder="Confirmar contraseña">
+            </div>
+            <div class="telefono">
+                <input type="tel" name="Telefono" required placeholder="Teléfono">
+            </div>            
+            <input type="submit" value="Registrarse">
+        </form>
+        <p><a href="inicio.html">¿Ya tienes una cuenta? </a></p>
+    </div>
+
+    <!-- Modal de Mensajes -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Mensaje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="mensajeErrorModal"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Validar contraseñas coincidentes en el cliente antes de enviar
+        document.getElementById("registerForm").onsubmit = function(event) {
+            event.preventDefault();
+            const contrasena = document.getElementById("Contrasena").value;
+            const conficontrasena = document.getElementById("Conficontrasena").value;
+
+            if (contrasena !== conficontrasena) {
+                mostrarModal("Las contraseñas no coincide.");
+                return;
+            }
+
+            // Envia los datos a PHP para ver si las contraseñas coinciden
+            const formData = new FormData(this);
+            fetch("controlador/register.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    setTimeout(() => {
+                        window.location.href = "inicio.html";
+                    }, 3000);
+                } else {
+                    mostrarModal(data.message);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        };
+
+        function mostrarModal(mensaje) {
+            document.getElementById("mensajeErrorModal").innerHTML = mensaje;
+            $('#errorModal').modal('show');
+        }
+    </script>
+</body>
+</html>

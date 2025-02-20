@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quatro Slab', serif;
+}
+
+body {
+    font-family: 'Quatro Slab', serif;
+    font-size: 16px; 
+    background-color: #f4f4f4;
+    padding-top: 60px; 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #691C32;
+    padding: 1px 20px;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #691C32;
+    padding: 3px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 8px; 
+}
+
+h1.text-center {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 80px; /* Ajusta para dar espacio por debajo de la navbar fija */
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.modal-content {
+    background-color: #f0f8ff; /* Color de fondo del modal */
+    border-radius: 8px;
+}
+
+.modal-header {
+    justify-content: center;
+    background-color: #691C32; /* Color de fondo del encabezado */
+    color: white;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    text-align: left;
+    padding: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: #10312B;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1b5349;
+}

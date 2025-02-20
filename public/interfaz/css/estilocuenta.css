@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quatro Slab', serif;
+}
+
+body {
+    font-family: 'Quatro Slab', serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #691C32;; 
+    padding: 3px 10px; 
+    font-size: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar a {
+    color: #F4F4F4; 
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 18px; 
+    font-family: 'Quatro Slab', serif;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #691C32;
+    color: white;
+    text-align: center;
+}
+
+/* Estilos adicionales */
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input[type="password"] {
+    flex: 1;
+}
+
+.show-password-label {
+    margin-left: 8px;
+    color: #691C32;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#editar-btn {
+    background-color: #691C32;
+    color: white;
+}
+
+#guardar-btn {
+    background-color: #10312B;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e60000;
+    color: white;
+}
+
+.logout-btn {
+    background-color: #9f2141;
+    color: white;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#editar-btn:hover {
+    background-color: #9d2843;
+}
+
+#guardar-btn:hover {
+    background-color: #20675a;
+}
+
+.delete-btn:hover {
+    background-color: #ff4d4d;
+}
+
+.logout-btn:hover {
+    background-color: #cf2a53;
+}
